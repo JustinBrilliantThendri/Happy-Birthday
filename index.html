@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <div class="container">
+        <div class="sub-container">
+            <div class="intro">
+                <h1>Hello Traveller!</h1>
+                <h3>Please fill this form for the wishes.</h3>
+                <button type="button" onclick="close_intro()">Close</button>
+            </div>
+        </div>
+        <div class="form">
+            <div class="name-form">
+                <input type="text" class="name" oninput="enable_button()" required>
+            </div>
+            <div class="date-form">
+                <input type="text" class="date" oninput="enable_button()" required>
+                <span class="hint">
+                    <i class="fa-regular fa-circle-question"></i>
+                    <input type="checkbox" title="Hint" class="hint-button" onclick="hint(this.checked);enable_button();">
+                </span>
+            </div>
+            <div class="btn-done">
+                <button type="button" class="done" onclick="submit()" disabled>
+                    <i class="fa-solid fa-cake-candles"></i>Done!
+                </button>
+                <div class="loader"></div>
+            </div>
+        </div>
+        <div class="sub-container-2">
+            <div class="wishes">
+                <h1></h1>
+                <p></p>
+                <button type="button" onclick="setTimeout(()=>window.location.reload(),1000)">Close</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
